@@ -155,7 +155,7 @@ export default function Home() {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="hidden md:block bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors transform hover:scale-105"
-          onClick={() => router.push("/dashboard")}
+          onClick={() => router.push("/login")}
         >
           Start Trading
         </motion.button>
@@ -222,6 +222,7 @@ export default function Home() {
               tool
             </motion.p>
             <motion.button
+            onClick={() => router.push("/register")}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               initial={{ opacity: 0, y: 20 }}
@@ -229,6 +230,7 @@ export default function Home() {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-blue-600 text-white px-8 py-4 rounded-md text-xl hover:bg-blue-700 transition-colors flex items-center mx-auto"
             >
+              
               Open Free Account <ArrowRight className="ml-2" />
             </motion.button>
           </div>
@@ -378,6 +380,7 @@ export default function Home() {
               success.
             </p>
             <motion.button
+            onClick={() => router.push("/register")}
               className="bg-white text-blue-600 px-8 py-4 rounded-md text-xl font-bold hover:bg-gray-100 transition-colors relative z-10"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
