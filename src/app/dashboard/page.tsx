@@ -393,13 +393,18 @@ const MostBought = () => (
 );
 
 const ProductsAndTools = () => {
+  
+  const router = useRouter();
   const products = [
     { name: "F&O", icon: BarChart2 },
     { name: "IPO", icon: DollarSign },
     { name: "ETFs", icon: PieChart },
     { name: "FDs", icon: TrendingUp },
     { name: "US Stocks", icon: Activity },
+    {name:"Charting Tools", icon: BarChart2},
+    { name: "Charts", icon: Activity },
   ];
+  
 
   return (
     <motion.div {...fadeInUp} className="my-8">
@@ -408,11 +413,15 @@ const ProductsAndTools = () => {
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {products.map((product) => (
+
           <motion.div
             key={product.name}
             className="bg-gray-800 p-4 rounded-lg shadow-lg hover:shadow-xl transition-shadow text-center cursor-pointer"
             whileHover={{ scale: 1.05, backgroundColor: "#2D3748" }}
             whileTap={{ scale: 0.95 }}
+            onClick={()=>
+              product.name==="Charts" && router.push("/charts")
+            }
           >
             <motion.div
               className="bg-blue-500 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-2"
