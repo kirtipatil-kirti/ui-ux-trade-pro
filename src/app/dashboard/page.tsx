@@ -273,11 +273,14 @@ const ProductsAndTools = () => {
     { name: "US Stocks", icon: Activity },
     { name: "Charts", icon: BarChart2 },
     { name: "Simulation", icon: DollarSign },
+    { name: "Patterns", icon: Activity },
   ];
 
   const handleClick = (name: string) => {
     if (name === "Charts") router.push("/charts");
     if (name === "Simulation") router.push("/simulation");
+    if (name === "Patterns") router.push("/patterns");
+
   };
 
   return (
