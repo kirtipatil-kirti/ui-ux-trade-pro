@@ -95,24 +95,21 @@ const PATTERN_INFO: Record<string, { color: string; description: string }> = {
 };
 
 const CandleBar = (props: any) => {
-  const { x, y, width, height, open, close, high, low, fill } = props;
-  const isGreen = close >= open;
+  const { x, y, width, height } = props;
+  const isGreen = props.close >= props.open;
   const color = isGreen ? "#00C49F" : "#FF8042";
   const barY = Math.min(y, y + height);
   const barHeight = Math.abs(height);
 
   return (
     <g>
-      <line x1={x + width / 2} y1={props.highY} x2={x + width / 2} y2={barY}
-        stroke={color} strokeWidth={1} />
-      <rect x={x} y={barY} width={width} height={Math.max(barHeight, 2)}
+      <rect x={x} y={barY} width={width}
+        height={Math.max(barHeight, 2)}
         fill={color} stroke={color} />
-      <line x1={x + width / 2} y1={barY + barHeight}
-        x2={x + width / 2} y2={props.lowY}
-        stroke={color} strokeWidth={1} />
     </g>
   );
 };
+
 
 export default function Patterns() {
   const router = useRouter();
@@ -129,9 +126,7 @@ export default function Patterns() {
 
   const patterns = ["All", "Doji", "Hammer", "Shooting Star", "Bullish Engulfing", "Bearish Engulfing"];
 
-  const filteredCandles = filter === "All"
-    ? candles
-    : candles.filter(c => c.pattern === filter);
+  
 
   const detectedPatterns = candles.filter(c => c.pattern);
 
@@ -141,7 +136,7 @@ export default function Patterns() {
       <div style={{
         background: "#0d1b2a", padding: "16px 32px",
         display: "flex", justifyContent: "space-between",
-        alignItems: "center", borderBottom: "1px solid #1a2a3a"
+        alignItems: "const filteredCcenter", borderBottom: "1px solid #1a2a3a"
       }}>
         <h1 style={{ color: "#00d4ff", fontSize: "22px" }}>📈 TradePro</h1>
         <button onClick={() => router.push("/dashboard")} style={{
