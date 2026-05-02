@@ -275,6 +275,7 @@ const ProductsAndTools = () => {
     { name: "Simulation", icon: DollarSign },
     { name: "Patterns", icon: Activity },
     {name:"Indicators",icon:Activity},
+    { name: "Analytics", icon: PieChart },
   ];
 
   const handleClick = (name: string) => {
@@ -282,6 +283,7 @@ const ProductsAndTools = () => {
     if (name === "Simulation") router.push("/simulation");
     if (name === "Patterns") router.push("/patterns");
     if (name === "Indicators") router.push("/indicators");
+    if (name === "Analytics") router.push("/analytics");
   
   };
 
