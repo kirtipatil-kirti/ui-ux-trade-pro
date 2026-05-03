@@ -218,7 +218,7 @@ export default function Analytics() {
                 <XAxis dataKey="day" stroke="#888" tick={{ fontSize: 9 }} />
                 <YAxis stroke="#888" tickFormatter={v => `${(v / 1000).toFixed(0)}K`} />
                 <Tooltip contentStyle={{ background: "#0d1b2a" }}
-                  formatter={(v: number) => [`${(v / 1000).toFixed(0)}K`, "Volume"]} />
+                  formatter={(v: any) => [`${(Number(v) / 1000).toFixed(0)}K`, "Volume"]} />
                 <Bar dataKey="volume" fill="#8884d8" name="Volume" />
               </BarChart>
             </ResponsiveContainer>
