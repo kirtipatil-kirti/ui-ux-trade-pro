@@ -1,7 +1,7 @@
 # 📈 TradePro — Internship Project
 
 ## 🌐 Live Demo
-[Click here to view live app](https://ui-ux-trade-pro.vercel.app)
+[Click here to view live app](https://ui-ux-trade-pro-peach.vercel.app/)
 
 ## 📋 Project Overview
 TradePro is a professional stock trading platform built with Next.js and Firebase, 
