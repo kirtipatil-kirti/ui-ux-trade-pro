@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-Live Link:- https://ui-ux-trade-pro.vercel.app
-## Getting Started
+# 📈 TradePro — Internship Project
 
-First, run the development server:
+## 🌐 Live Demo
+[Click here to view live app](https://ui-ux-trade-pro.vercel.app)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 📋 Project Overview
+TradePro is a professional stock trading platform built with Next.js and Firebase, 
+featuring 6 advanced trading features as part of the Elevanceskills internship.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✅ All 6 Tasks Completed
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Task 1 — User Authentication & Data Persistence
+- Firebase Email/Password Authentication
+- User Registration and Login
+- Firestore database for user data
+- Persistent watchlist, portfolio, preferences
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Task 2 — Multi-Asset Chart
+- Compare Apple, Google, Bitcoin, Bonds
+- Toggle visibility of individual assets
+- Switch between Line and Bar charts
+- Auto-updates every 3 seconds
 
-## Learn More
+### Task 3 — Portfolio Simulation
+- Buy and sell stocks with virtual $10,000
+- Real-time price updates every 3 seconds
+- Track profit/loss and portfolio value
+- Asset allocation pie chart
+- Complete trade history with fees
 
-To learn more about Next.js, take a look at the following resources:
+### Task 4 — Candlestick Pattern Recognition
+- Auto-detects 5 patterns: Doji, Hammer, Shooting Star, Bullish/Bearish Engulfing
+- Visual markers on chart
+- Pattern descriptions and market implications
+- Filter by specific pattern
+- Auto-updates every 5 seconds
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Task 5 — Custom Indicators & Strategies
+- Moving Average (customizable period)
+- Bollinger Bands
+- RSI (Relative Strength Index)
+- Custom buy/sell strategy rules
+- Real-time trade signals table
+- Adjustable thresholds via sliders
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Task 6 — Advanced Analytics Dashboard
+- Area chart for multiple metrics
+- Price vs Moving Average comparison
+- Volume analysis bar chart
+- Sector allocation pie chart
+- RSI and MACD charts
+- Time range selector (7D, 14D, 30D)
+- Auto-updates every 5 seconds
 
-## Deploy on Vercel
+## 🛠️ Tech Stack
+| Technology | Purpose |
+|---|---|
+| Next.js 14 | Frontend framework |
+| TypeScript | Type safety |
+| Tailwind CSS | Styling |
+| Firebase Auth | User authentication |
+| Cloud Firestore | Database |
+| Recharts | Charts and graphs |
+| Framer Motion | Animations |
+| Vercel | Deployment |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📁 Project Structure
