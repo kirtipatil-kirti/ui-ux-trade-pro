@@ -89,7 +89,7 @@ export default function Analytics() {
         }}>← Dashboard</button>
       </div>
 
-      <div style={{ padding: "32px", maxWidth: "1200px", margin: "0 auto" }}>
+      <div style={{ padding: "16px", maxWidth: "1200px", margin: "0 auto" }}>
         <h2 style={{ fontSize: "26px", marginBottom: "8px" }}>
           📈 Advanced Analytics Dashboard
         </h2>
@@ -112,7 +112,7 @@ export default function Analytics() {
 
         {/* KPI Cards */}
         <div style={{
-          display: "grid", gridTemplateColumns: "repeat(5, 1fr)",
+          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
           gap: "16px", marginBottom: "24px"
         }}>
           {[
@@ -205,7 +205,7 @@ export default function Analytics() {
         </div>
 
         {/* Bottom Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px", marginBottom: "24px" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px", marginBottom: "24px" }}>
           {/* Volume Chart */}
           <div style={{
             background: "#0d1b2a", padding: "24px",

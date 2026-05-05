@@ -16,55 +16,75 @@ export default function Login() {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       router.push("/dashboard");
-    } catch  {
+    } catch {
       setError("Invalid email or password");
     }
   };
 
   return (
     <div style={{
-      minHeight: "100vh", display: "flex",
-      alignItems: "center", justifyContent: "center",
-      background: "linear-gradient(135deg, #0a0a1a, #0d1b2a)"
+      minHeight: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      background: "linear-gradient(135deg, #0a0a1a, #0d1b2a)",
+      padding: "16px"
     }}>
       <div style={{
         background: "rgba(255,255,255,0.05)",
-        padding: "40px", borderRadius: "16px",
-        width: "100%", maxWidth: "400px",
+        padding: "32px 24px",
+        borderRadius: "16px",
+        width: "100%",
+        maxWidth: "400px",
         border: "1px solid rgba(255,255,255,0.1)"
       }}>
-        <h2 style={{ color: "#00d4ff", textAlign: "center",
-          marginBottom: "24px", fontSize: "28px" }}>
+        <h2 style={{
+          color: "#00d4ff",
+          textAlign: "center",
+          marginBottom: "24px",
+          fontSize: "24px"
+        }}>
           📈 TradePro Login
         </h2>
-        {error && <p style={{ color: "red", textAlign: "center" }}>{error}</p>}
+        {error && (
+          <p style={{ color: "red", textAlign: "center", marginBottom: "12px" }}>
+            {error}
+          </p>
+        )}
         <form onSubmit={handleLogin}>
           <input type="email" placeholder="Email"
-            value={email} onChange={e => setEmail(e.target.value)}
+            value={email}
+            onChange={e => setEmail(e.target.value)}
             required style={{
-              display: "block", width: "100%", padding: "12px",
-              marginBottom: "16px", borderRadius: "8px",
-              border: "1px solid #333", background: "#1a1a2e",
-              color: "white", fontSize: "15px"
+              display: "block", width: "100%",
+              padding: "12px", marginBottom: "16px",
+              borderRadius: "8px", border: "1px solid #333",
+              background: "#1a1a2e", color: "white",
+              fontSize: "15px", boxSizing: "border-box"
             }} />
           <input type="password" placeholder="Password"
-            value={password} onChange={e => setPassword(e.target.value)}
+            value={password}
+            onChange={e => setPassword(e.target.value)}
             required style={{
-              display: "block", width: "100%", padding: "12px",
-              marginBottom: "16px", borderRadius: "8px",
-              border: "1px solid #333", background: "#1a1a2e",
-              color: "white", fontSize: "15px"
+              display: "block", width: "100%",
+              padding: "12px", marginBottom: "16px",
+              borderRadius: "8px", border: "1px solid #333",
+              background: "#1a1a2e", color: "white",
+              fontSize: "15px", boxSizing: "border-box"
             }} />
           <button type="submit" style={{
             width: "100%", padding: "12px",
             background: "#00d4ff", color: "#000",
             border: "none", borderRadius: "8px",
-            fontSize: "16px", fontWeight: "bold", cursor: "pointer"
+            fontSize: "16px", fontWeight: "bold",
+            cursor: "pointer"
           }}>
             Login
           </button>
         </form>
-        <p style={{ color: "#888", textAlign: "center", marginTop: "16px" }}>
+        <p style={{
+          color: "#888", textAlign: "center", marginTop: "16px"
+        }}>
           No account?{" "}
           <Link href="/register" style={{ color: "#00d4ff" }}>
             Register here

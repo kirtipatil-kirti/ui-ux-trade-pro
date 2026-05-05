@@ -118,7 +118,7 @@ export default function Indicators() {
         }}>← Dashboard</button>
       </div>
 
-      <div style={{ padding: "32px", maxWidth: "1100px", margin: "0 auto" }}>
+      <div style={{ padding: "16px", maxWidth: "1100px", margin: "0 auto" }}>
         <h2 style={{ fontSize: "26px", marginBottom: "8px" }}>
           📉 Custom Indicators & Strategies
         </h2>
@@ -128,7 +128,7 @@ export default function Indicators() {
 
         {/* Live Signal Cards */}
         <div style={{
-          display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
+          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
           gap: "16px", marginBottom: "24px"
         }}>
           {[

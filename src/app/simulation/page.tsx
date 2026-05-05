@@ -123,14 +123,14 @@ export default function Simulation() {
         }}>← Dashboard</button>
       </div>
 
-      <div style={{ padding: "32px", maxWidth: "1000px", margin: "0 auto" }}>
+      <div style={{ padding: "16px", maxWidth: "1000px", margin: "0 auto" }}>
         <h2 style={{ fontSize: "26px", marginBottom: "24px" }}>
           💰 Portfolio Simulation
         </h2>
 
         {/* Stats */}
         <div style={{
-          display: "grid", gridTemplateColumns: "repeat(3, 1fr)",
+          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))",
           gap: "16px", marginBottom: "24px"
         }}>
           {[
@@ -153,7 +153,7 @@ export default function Simulation() {
 
         {/* Stock Selector */}
         <div style={{
-          display: "grid", gridTemplateColumns: "repeat(4, 1fr)",
+          display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))",
           gap: "12px", marginBottom: "24px"
         }}>
           {STOCKS.map((s, i) => (

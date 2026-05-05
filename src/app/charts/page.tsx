@@ -61,7 +61,7 @@ export default function Charts() {
         </button>
       </div>
 
-      <div style={{ padding: "40px", maxWidth: "1000px", margin: "0 auto" }}>
+      <div style={{ padding: "16px", maxWidth: "1000px", margin: "0 auto" }}>
         <h2 style={{ fontSize: "28px", marginBottom: "24px" }}>
           📊 Multi-Asset Chart
         </h2>
